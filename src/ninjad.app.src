@@ -1,0 +1,12 @@
+{application, ninjad,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { ninjad_app, []}},
+  {env, []}
+ ]}.
