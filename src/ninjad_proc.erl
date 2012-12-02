@@ -6,4 +6,6 @@ start_link() ->
     {ok, Pid}.
 
 init() ->
-    io:format("foo~n").
+    receive
+        _ -> ok
+    end.

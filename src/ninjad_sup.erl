@@ -8,7 +8,10 @@ start_link() ->
 
 init([]) ->
     { ok,
-      { { one_for_one, 5, 10 }, [ ] } }.
+      { { one_for_one, 5, 10 },
+        [ { ninjad_web,
+            { ninjad_web, start_link, [ ] },
+            permanent, infinity, worker, [ ninjad_web ] } ] } }.
 
 add_proc_sup(Sup, MaxR, MaxT) ->
     supervisor:start_child(
