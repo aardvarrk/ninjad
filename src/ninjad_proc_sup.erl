@@ -1,4 +1,5 @@
 -module(ninjad_proc_sup).
+-behaviour(supervisor).
 -export([start_link/2, init/1]).
 
 start_link(MaxR, MaxT) ->
